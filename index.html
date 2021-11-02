@@ -1,165 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./style.css">
     <title>Comprar Imóveis - Oferta de imóveis à venda - Viva Real</title>
 </head>
 <body>
     <header>
         <div id="header-container">
-            <div>
-                <!-- logo -->
+            <div id="logo-nav-container">
+                <div id="logo">
+                <img src="./images/logo.svg" alt="logo">
+                </div>
+                <ul id="header-itens">
+                    <li>COMPRAR</li>
+                    <li>ALUGAR</li>
+                    <li>IMÓVEIS NOVOS</li>
+                    <li>SELEÇÃO VIVA REAL</li>
+                    <li>DESCOBRIR</li>
+                    <li>FINANCIAMENTO</li>
+                </ul>
             </div>
-            <ul>
-                <li>COMPRAR</li>
-                <li>ALUGAR</li>
-                <li>IMÓVEIS NOVOS</li>
-                <li>SELEÇÃO VIVA REAL</li>
-                <li>DESCOBRIR</li>
-                <li>FINANCIAMENTO</li>
-            </ul>
-            <div>
-                <div>ANUNCIAR IMÓVEIS</div>
-                <div>ENTRAR</div>
+            <div id="advertisement-login-options">
+                <div id="advertisement">ANUNCIAR IMÓVEIS</div>
+                <div id="login">ENTRAR</div>
             </div>
         </div>
     </header>
     <main>
         <div id="path-container">
             <ol>
-                <li>Viva Real</li>
-                <li>Venda</li>
+                <li class="path-component">Viva Real</li>
+                <li class="path-component">Venda</li>
             </ol>
         </div>
-        <aside>
-            <section>
-                <label for="search-input">LOCALIZAÇÃO DO IMÓVEL</label>
-                <input id="search-input" value="Digite uma rua, bairro ou cidade">
 
-                <label>IMÓVEL COM</label>
-                <div id="toggle-button">
-                    <!-- botão interruptor de bolinha -->
-                </div>
-                <div id="realty-type">
-                    <label>TIPO DE IMÓVEL</label>
-                    <select name="" id="select-type" disabled="disabled">Mostrar todos</select>
-                    <label for="select-type">Tour Virtual ou Vídeos</label>
-                </div>
-
-                <div id="price">
-                    <label for="min-price">PREÇO MÍNIMO</label>
-                    <input id="min-price" type="number" placeholder="R$ ">
-                    <label for="max-price">PREÇO MÁXIMO</label>
-                    <input id="max-price" type="number" placeholder="R$ ilimitado">
-                </div>
-
-                <div id="rooms-filters">
-                    <label for="">NÚMERO DE QUARTOS</label>
-                    <ul id="rooms">
-                        <li>1+</li>
-                        <li>2+</li>
-                        <li>3+</li>
-                        <li>4+</li>
-                        <li>5+</li>
-                    </ul>
-                </div>
-            </section>
-            <section>
-                <div id="realty-area">
-                    <label for="min-area">ÁREA MÍNIMA</label>
-                    <input id="min-area" type="number" placeholder="m²">
-                    <label for="max-area">ÁREA MÁXIMA</label>
-                    <input id="max-area" type="number" placeholder="ilimitado m²">
-                </div>
-                <div id="garage-filters">
-                    <ul id="garage">
-                        <li>1+</li>
-                        <li>2+</li>
-                        <li>3+</li>
-                        <li>4+</li>
-                        <li>5+</li>
-                    </ul>
-                </div>
-                <div id="bathroom-filters">
-                    <ul id="parking-spaces">
-                        <li>1+</li>
-                        <li>2+</li>
-                        <li>3+</li>
-                        <li>4+</li>
-                        <li>5+</li>
-                    </ul>
-                </div>
-            </section>
-        </aside>
-        <div id="results">
-            <div id="options-results-container">
-                <nav id="options">
-                    <ul>
-                        <button>COMPRAR</button>
-                        <button>ALUGAR</button>
-                        <button>IMÓVEIS NOVOS</button>
-                        <!-- 
-                            <button></button>
-                         -->
-                    </ul>
-                </nav>
-                <nav id="visualization-options">
-                    <div id="choice-of-filter">
-                        <!-- 
-                            icone de filtro
-                         -->
-                        <span>Ordenar por</span>
+        <div id="filters-results-container">
+            <aside>
+                <section id="search">
+                    <label for="search-input">LOCALIZAÇÃO DO IMÓVEL</label>
+                    <input id="search-input" placeholder="Digite uma rua, bairro ou cidade">
+    
+                    <label>IMÓVEL COM</label>
+                    <div id="toggle-button">
+                        <!-- botão interruptor de bolinha -->
                     </div>
-                    <ul id="filters-of-results">
-                        <li id="list-visualization">
-                            <!-- list -->
-                        </li>
-                        <li id="quartet-visualization">
-                            <!-- quartet group -->
-                        </li>
-                        <li id="sextet-visualization">
-                            <!-- sextet group -->
-                        </li>
+                    <div id="realty-type">
+                        <label>TIPO DE IMÓVEL</label>
+                        <select name="" id="select-type" disabled="disabled">Mostrar todos</select>
+                        <label for="select-type">Tour Virtual ou Vídeos</label>
+                    </div>
+    
+                    <div id="price">
+                        <label for="min-price">PREÇO MÍNIMO</label>
+                        <input id="min-price" type="number" placeholder="R$ ">
+                        <label for="max-price">PREÇO MÁXIMO</label>
+                        <input id="max-price" type="number" placeholder="R$ ilimitado">
+                    </div>
+    
+                    <div id="rooms-filters">
+                        <label for="">NÚMERO DE QUARTOS</label>
+                        <ul id="rooms">
+                            <li>1+</li>
+                            <li>2+</li>
+                            <li>3+</li>
+                            <li>4+</li>
+                            <li>5+</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="filters">
+                    <div id="realty-area">
+                        <label for="min-area">ÁREA MÍNIMA</label>
+                        <input id="min-area" type="number" placeholder="m²">
+                        <label for="max-area">ÁREA MÁXIMA</label>
+                        <input id="max-area" type="number" placeholder="ilimitado m²">
+                    </div>
+                    <div id="garage-filters">
+                        <label for="garage">NÚMERO DE VAGAS NA GARAGEM</label>
+                        <ul id="garage">
+                            <li>1+</li>
+                            <li>2+</li>
+                            <li>3+</li>
+                            <li>4+</li>
+                            <li>5+</li>
+                        </ul>
+                    </div>
+                    <div id="bathroom-filters">
+                        <label for="bathrooms">NÚMERO DE BANHEIROS</label>
+                        <ul id="bathrooms">
+                            <li>1+</li>
+                            <li>2+</li>
+                            <li>3+</li>
+                            <li>4+</li>
+                            <li>5+</li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+            <div id="results">
+                <div id="options-results-container">
+                    <nav id="options">
+                        <ul>
+                            <button>COMPRAR</button>
+                            <button>ALUGAR</button>
+                            <button>IMÓVEIS NOVOS</button>
+                            <button>SELEÇÃO VIVA REAL</button>
+                        </ul>
+                    </nav>
+                    
+                    <h1>5.374.508 <span>Imóveis à venda em São Paulo</span></h1>
+                    <ul id="searched-items">
+                        <li><span>São Paulo - SP</span><span>x</span></li>
+                        <li><span>Rio De Janeiro - RJ</span><span>x</span></li>
                     </ul>
-                </nav>
-                <h1>5.374.508 <span>Oferta de Imóveis à venda no Brasil</span></h1>
+                </div>
+                <article class="card-container">
+                    <!-- imagem -->
+                    <div class="card-informations">
+                        <div class="descriptions-container">
+                            <h2>
+                                <span>Rua João Antônio de Oliveira, 544 - Móoca, São Paulo - SP</span>
+                                <span>Apartamento com 3 Quartos à venda, 170...</span>
+                            </h2>
+                            <ul class="properties">
+                                <li>170m²</li>
+                                <li>3 Quartos</li>
+                                <li>3 Banheiros</li>
+                                <li>3 Vagas</li>
+                            </ul>
+                            <ul class="amenities">
+                                <li>Piscina</li>
+                                <li>Mobiliado</li>
+                                <li>Churrasqueira</li>
+                                <li>Elevador</li>
+                                <li>Academia</li>
+                            </ul>
+                        </div>
+                        <div class="values-contact-container">
+                            <div class="prices">
+                                <p class="price">R$ 1.700.000</p>
+                                <p>Condomínio: <span>R$ 1.000</span></p>
+                            </div>
+                            <div id="contact-buttons">
+                                <button>TELEFONE</button>
+                                <button>ENVIAR MENSAGEM</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <article class="card-container">
-                <img src="" alt="">
-                <div class="card-informations">
-                    <div id="descriptions-container">
-                        <h2>Rua João Antônio de Oliveira, 544 - Móoca, São Paulo - SP
-                            <span>Apartamento com 3 Quartos à venda, 170...</span>
-                        </h2>
-                        <ul id="properties">
-                            <li>170m²</li>
-                            <li>3 Quartos</li>
-                            <li>3 Banheiros</li>
-                            <li>3 Vagas</li>
-                        </ul>
-                        <ul id="amenities">
-                            <li>Piscina</li>
-                            <li>Mobiliado</li>
-                            <li>Churrasqueira</li>
-                            <li>Elevador</li>
-                            <li>Academia</li>
-                        </ul>
-                    </div>
-                    <div id="values-contact-container">
-                        <div id="values">
-                            <p id="price">R$ 1.700.000</p>
-                            <p>Condomínio: <span>R$ 1.000</span></p>
-                        </div>
-                        <div id="contact-buttons">
-                            <button>TELEFONE</button>
-                            <button>ENVIAR MENSAGEM</button>
-                        </div>
-                    </div>
-                </div>
-            </article>
         </div>
     </main>
     <script src="./index.js" type="module"></script>

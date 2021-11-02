@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    --blue: #1190cd;
+}
+
+body {
+    background-color: rgba(255,255,255,.001);
+    
+}
+
+main {
+    padding: 0 3.5vw 0 3.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-container, #header-itens, #advertisement-login-options, #path-container ol {
+    display: flex;
+    flex-direction: row;
+    padding: .75vw 0 .75vw 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* NAV BAR FAKE / HEADER */
+
+#header-container {
+    background-color: var(--blue);
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 3.5vw 9px 3.5vw;
+}
+
+#header-itens li, #advertisement-login-options>div {
+    margin: 0 16px 0 16px;
+    color: white;
+    
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#logo-nav-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo-nav-container > ul {
+    margin-left: 24px;
+}
+
+#logo {
+    display: flex;
+    box-sizing: content-box;
+}
+
+#logo, #logo-nav-container ul li, #advertisement, #login:hover {
+    cursor: pointer;
+}
+
+#logo-nav-container ul li:hover, #advertisement:hover, #login:hover {
+    background-color: #57afd8;
+}
+
+/* MAIN / FILTERS AND RESULTS */
+
+#path-container ol li {
+    list-style: disc;
+}
+
+#path-container > ol :first-child {
+    list-style-type: none;
+}
+
+.path-component {
+    padding: 0.4vw 3vw .4vw .5vw;
+}
+
+#filters-results-container {
+    display: flex;
+    
+}
+
+section#filters, .card-container {
+    border: 1px solid rgba(0, 0, 0, .12);
+}
+
+section#search, section#filters, .card-container {
+    border-radius: 4px;
+}
+
+/* RESULTS AND CARDS */
+#results {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+#results #options {
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+
+
+#searched-items {
+    display: flex;
+}
+
+#searched-items > li {
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin: 0 4px 0 4px;
+}
+
+#searched-items > li :last-child {
+    margin-left: 10px;
+    margin-right: -16px;
+    box-sizing: content-box;
+}
+
+#searched-items li {
+    padding: 0 32px 0 12px;
+    box-sizing: content-box;
+    border: 1px solid var(--blue);
+    border-radius: 25px;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+}
+
+#options-results-container {
+    margin-bottom: 24px;
+}
+
+article {
+    margin-bottom: 18px;
+}
+
+
+/* ASIDE AND FILTERS */
+
+aside section {
+    margin-bottom: 24px;
+}
+
+#search {
+    background-color: #fdd685;
+    border: 1px solid #fdb10f;
+}
+
+#search {
+
+}
