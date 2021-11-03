@@ -9,7 +9,6 @@ const createCard = (info) => {
     const title = document.createElement('h2');
     const address = document.createElement('span');
     const description = document.createElement('span');
-    let properties = document.createElement('ul');
     let amenities = document.createElement('ul');
     const bottomContainer = document.createElement('div');
     bottomContainer.classList.add('values-contact-container');
@@ -23,10 +22,10 @@ const createCard = (info) => {
     const addressInfo = info.listing.address;
     address.innerText = `${addressInfo.street}, ${addressInfo.streetNumber} - ${addressInfo.neighborhood}, ${addressInfo.city} - ${addressInfo.stateAcronym}`;
     description.innerText = info.link.name;
-    propertiesList = formatProperties();
-    properties = createOrderedList(propertiesList, properties);
-    amenities = createOrderedList(info.listing.amenities, amenities);
 
+    const properties = formatProperties(info.listing);
+    amenities = createOrderedList(info.listing.amenities, amenities);
+    
 
     title.append(address, description);
     pricesContainer.append(price, condominio);
@@ -40,14 +39,45 @@ const createCard = (info) => {
 const createOrderedList = (array, ul) => {
     array.forEach(e => {
         let li = document.createElement('li');
-        li.textContent = e;
+        li.append(e);
         ul.appendChild(li);
     });
     return ul;
 }
 
 const formatProperties = (properties) => {
-    
+    let ul = document.createElement('ul');
+    if (properties.totalAreas) {
+        let li = document.createElement('li');
+        let span = document.createElement('span');
+        let sup = document.createElement('sup');
+        span.innerText = properties.totalAreas[0];
+        sup.innerText = 2;
+        li.append(span, ' m', sup);
+        ul.appendChild(li);
+    }
+    if (properties.bedrooms) {
+        let li = document.createElement('li');
+        let span = document.createElement('span');
+        span.innerText = properties.bedrooms[0];
+        li.append(span, ' Quartos');
+        ul.appendChild(li);
+    }
+    if (properties.bathrooms) {
+        let li = document.createElement('li');
+        let span = document.createElement('span');
+        span.innerText = properties.bathrooms[0];
+        li.append(span, ' Banheiros');
+        ul.appendChild(li);
+    }
+    if (properties.parkingSpaces) {
+        let li = document.createElement('li');
+        let span = document.createElement('span');
+        span.innerText = properties.bathrooms[0];
+        li.append(span, (Number(span.innerText) > 1) ? ' Vagas': ' Vaga');
+        ul.appendChild(li);
+    }
+    return ul;
 }
 
 export default createCard;
